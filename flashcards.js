@@ -150,4 +150,11 @@ function clearCards() {
  */
 function capitalizeFirstChar(str) {
     // TODO: Finish me
+
+    if(!str) {
+        return str;
+    }
+    else{
+        return str[0].charAt(0).toUpperCase() + str.slice(1);
+    }
 }

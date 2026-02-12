@@ -129,6 +129,26 @@ function addCard(question, answer) {
  */
 function listCards() {
     // TODO: Finish me
+
+    questionEl.value = "";
+    answerEl.value = "";
+
+    // error if no questions
+    if (questions.length === 0){
+        outputEl.textContent = "There are no cards to list.";
+        return;
+    }
+
+    let listOutput = "All cards: \n";
+    // for loop to add all cards
+    for (let i in questions) {
+
+        let cardNumber = Number[i] + 1;
+        // add card number and question but not the answer
+        listOutput = listOutput + "#" + cardNumber + ": " + questions[i] + "\n";
+    }
+    // put the whole string into the output area
+    outputEl.textContent = listOutput;
 }
 
 /**

@@ -50,6 +50,28 @@ form.addEventListener("submit", function (event) {
      - use a default block to display an "Unknown command" error using the commandErrorEL
      - NOTE: for "add" pass the question and answer trim value to the addCard function
      */
+
+    switch (commandEl.value.toLowerCase()){
+
+        case "add":
+            addCard(questionEl.value.trim(), answerEl.value.trim());
+            break;
+        case "list":
+            listCards()
+            break;
+        case "quiz":
+            showNextCard()
+            break;
+        case "clear":
+            clearCards()
+            break;
+        case "load":
+            loadDefault()
+            break;
+        default:
+            commandErrorEl.textContent = "Unknown command";
+            break;
+    }
 });
 
 /**

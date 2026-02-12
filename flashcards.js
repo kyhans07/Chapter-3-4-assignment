@@ -87,7 +87,37 @@ form.addEventListener("submit", function (event) {
  */
 function addCard(question, answer) {
     let dataValidationError = false;
-    // TODO: Finish me
+
+    // checks for user input for question and throws an error if it remains blank
+    if (question === "") {
+        questionErrorEl.textContent = "Please enter a  question";
+        dataValidationError = true;
+    }
+
+    // checks for user unput for answer and throws an error if it remains blank
+    if (answer === "") {
+        questionErrorEl.textContent = "Please enter a  answer";
+        dataValidationError = true;
+    }
+
+    // returns if there is an error thrown
+    if (dataValidationError === true ){
+        return;
+    }
+    // capitalizes the first letter of the question and answer
+    question = capitalizeFirstChar(question);
+    answer = capitalizeFirstChar(answer);
+
+    // adds question mark to end of questions that do not contain a question mark
+    if (question.endsWith ("?") === false ){
+        question = question + "?";
+    }
+
+    question.push(question);
+    answer.push(answer);
+    // outputs the question with its number and answer.
+    outputEl.textContent = "Card# " + question.length + "added: " + question + "-> " + answer;
+
 }
 
 /**
@@ -149,8 +179,6 @@ function clearCards() {
  * @returns {*|string} where the first letter is uppercased
  */
 function capitalizeFirstChar(str) {
-    // TODO: Finish me
-
     if(!str) {
         return str;
     }

@@ -170,6 +170,17 @@ function showNextCard() {
  */
 function clearCards() {
     // TODO: Finish me
+    //reset input fields to empty string
+    questionEL.value = "";
+    answerEl.value = "";
+
+    //clears arrays by setting value to 0
+    quesiton.length = 0;
+    answer.length = 0;
+    // resets index value
+    currentIndex = 0;
+
+    outputEl.textContent = "All cards cleared!";
 }
 
 /**

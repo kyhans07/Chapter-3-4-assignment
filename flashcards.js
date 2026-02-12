@@ -1,4 +1,9 @@
-// TODO: Code a program header with a summary, author's FULL name, date, and GitHub repository URL
+// This is a program to create flashcards to be used a study tool where it give the functionality
+// to generate new flash cards to cycle through them
+// Author: Kyler Hanson
+// date: 2-12-2026
+// https://github.com/kyhans07/Chapter-3-4-assignment
+
 "use strict";
 
 // declare two arrays for the questions and answers

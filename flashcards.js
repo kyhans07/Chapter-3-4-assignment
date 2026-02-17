@@ -90,13 +90,13 @@ function addCard(question, answer) {
 
     // checks for user input for question and throws an error if it remains blank
     if (question === "") {
-        questionErrorEl.textContent = "Please enter a  question";
+        questionErrorEl.textContent = "Please enter a question";
         dataValidationError = true;
     }
 
     // checks for user unput for answer and throws an error if it remains blank
     if (answer === "") {
-        questionErrorEl.textContent = "Please enter a  answer";
+        answerErrorEl.textContent = "Please enter an answer";
         dataValidationError = true;
     }
 
@@ -113,10 +113,10 @@ function addCard(question, answer) {
         question = question + "?";
     }
 
-    question.push(question);
-    answer.push(answer);
+    questions.push(question);
+    answers.push(answer);
     // outputs the question with its number and answer.
-    outputEl.textContent = "Card# " + question.length + "added: " + question + "-> " + answer;
+    outputEl.textContent = "Card# " + question.length + " added: " + question + " -> " + answer;
 
 }
 
@@ -143,7 +143,8 @@ function listCards() {
     // for loop to add all cards
     for (let i in questions) {
 
-        let cardNumber = Number[i] + 1;
+        let text = questions[i];
+        let cardNumber = Number(i) + 1;
         // add card number and question but not the answer
         listOutput = listOutput + "#" + cardNumber + ": " + questions[i] + "\n";
     }
@@ -186,17 +187,17 @@ function showNextCard() {
         outputEl.textContent = "There are no cards to list.";
     }
 
-    if (displayAnswer === true ){
+    if (displayAnswer === true ) {
         outputEl.textContent = "card #" + (currentIndex + 1) + " : " +
-                        questions[currentIndex] + "\nAnswer: " +
-                        answers[currentIndex] + "\n(Press Run to see next question)";
-    }
-    displayAnswer = false;
+            questions[currentIndex] + "\nAnswer: " +
+            answers[currentIndex] + "\n(Press Run to see next question)";
 
-    currentIndex = currentIndex + 1;
+        displayAnswer = false;
+        currentIndex = currentIndex + 1;
 
-    if (currentIndex === questions.length){
-        currentIndex = 0;
+        if (currentIndex >= questions.length) {
+            currentIndex = 0;
+        }
     }
     else {
         outputEl.textContent = "card #" + (currentIndex + 1) +
@@ -216,12 +217,12 @@ function showNextCard() {
 function clearCards() {
     // TODO: Finish me
     //reset input fields to empty string
-    questionEL.value = "";
+    questionEl.value = "";
     answerEl.value = "";
 
     //clears arrays by setting value to 0
-    quesiton.length = 0;
-    answer.length = 0;
+    questions.length = 0;
+    answers.length = 0;
     // resets index value
     currentIndex = 0;
 

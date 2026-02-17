@@ -179,6 +179,31 @@ function loadDefault() {
   */
 function showNextCard() {
     // TODO: Finish me
+    questionEl.value = "";
+    answerEl.value = "";
+
+    if (questions.length === 0){
+        outputEl.textContent = "There are no cards to list.";
+    }
+
+    if (displayAnswer === true ){
+        outputEl.textContent = "card #" + (currentIndex + 1) + " : " +
+                        questions[currentIndex] + "\nAnswer: " +
+                        answers[currentIndex] + "\n(Press Run to see next question)";
+    }
+    displayAnswer = false;
+
+    currentIndex = currentIndex + 1;
+
+    if (currentIndex === questions.length){
+        currentIndex = 0;
+    }
+    else {
+        outputEl.textContent = "card #" + (currentIndex + 1) +
+                " : " + questions[currentIndex] + "\n(Please Run to see answer): ";
+        displayAnswer = true;
+    }
+
 }
 
 /**

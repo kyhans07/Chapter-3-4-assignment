@@ -1,4 +1,4 @@
-// This is a program to create flashcards to be used a study tool where it give the functionality
+// This is a program to create flashcards to be used a study tool where it gives the functionality
 // to generate new flash cards to cycle through them
 // Author: Kyler Hanson
 // date: 2-12-2026
@@ -65,7 +65,7 @@ form.addEventListener("submit", function (event) {
         case "clear":
             clearCards()
             break;
-        case "load":
+        case "load_default":
             loadDefault()
             break;
         default:
@@ -160,6 +160,23 @@ function listCards() {
  */
 function loadDefault() {
     // TODO: Finish me
+
+    questionEl.value = "";
+    answerEl.value = "";
+
+    clearCards();
+
+    questions.push("What time is Debbie's class?");
+    answers.push("2PM");
+
+    questions.push("what is 2 + 2?");
+    answers.push("4");
+
+    questions.push("What color is the sky?");
+    answers.push("blue");
+
+    outputEl.textContent = "Loaded " + questions.length + " default questions.";
+
 }
 
 /**

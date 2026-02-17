@@ -116,7 +116,7 @@ function addCard(question, answer) {
     questions.push(question);
     answers.push(answer);
     // outputs the question with its number and answer.
-    outputEl.textContent = "Card# " + question.length + " added: " + question + " -> " + answer;
+    outputEl.textContent = "Card# " + questions.length + " added: " + question + " -> " + answer;
 
 }
 
@@ -143,7 +143,6 @@ function listCards() {
     // for loop to add all cards
     for (let i in questions) {
 
-        let text = questions[i];
         let cardNumber = Number(i) + 1;
         // add card number and question but not the answer
         listOutput = listOutput + "#" + cardNumber + ": " + questions[i] + "\n";

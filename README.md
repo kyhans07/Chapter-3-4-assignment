@@ -29,10 +29,25 @@ This program provides a simple interface for students to create their own digita
 2. Open `index.html` in any modern web browser.
 3. Select a command from the dropdown and click "Run".
 
-## Screenshots
+## Screenshots (folder would not accept screen shots at all)
 
 ### Main Interface
-![App Interface](![img_3.png](img_3.png))
+<img width="1060" height="658" alt="image" src="https://github.com/user-attachments/assets/5bcd1750-217f-4da0-9bd9-ef1e871cf357" />
+
+### List Cards
+<img width="1030" height="758" alt="image" src="https://github.com/user-attachments/assets/0c7dfcac-bd88-4659-8664-273e039e3669" />
+
+
 
 ### Quiz Mode in Action
-![Quiz Mode](images/quiz_mode.png)
+<img width="1060" height="734" alt="image" src="https://github.com/user-attachments/assets/30ad1446-a11a-499f-b24d-750fa505cd96" />
+
+
+### Clear Cards
+<img width="1060" height="644" alt="image" src="https://github.com/user-attachments/assets/c579706e-3996-4539-b562-4c3f2d02346e" />
+
+
+### Load Default
+<img width="1086" height="672" alt="image" src="https://github.com/user-attachments/assets/615c8c60-e661-4013-a976-080fafc079de" />
+
+
